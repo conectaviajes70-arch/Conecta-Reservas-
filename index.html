@@ -353,6 +353,16 @@ function rechazar(){
  document.getElementById('price').innerText=0;
 }
 
+ function toggleParada(){
+ let p = document.getElementById("paradaBox");
+
+ if(p.style.display === "none"){
+   p.style.display = "block";
+ } else {
+   p.style.display = "none";
+ }
+}  
+
 /* RESET */
 function reset(){ location.reload(); }
 
@@ -374,15 +384,6 @@ function enviarReserva(km,min,precio){
    tiempo:min,
    precio:precio
 
-   function toggleParada(){
- let p = document.getElementById("paradaBox");
-
- if(p.style.display === "none"){
-   p.style.display = "block";
- } else {
-   p.style.display = "none";
- }
-}
  })});
 }
 </script>
