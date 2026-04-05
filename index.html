@@ -37,6 +37,54 @@ input, select {
   border-radius:10px; margin-top:10px;
 }
 
+/* ===== FIX INPUT MAPBOX ===== */
+.mapboxgl-ctrl-geocoder {
+  background: transparent !important;
+  border-radius: 12px !important;
+  border: none !important;
+}
+
+.mapboxgl-ctrl-geocoder input {
+  background: rgba(26, 31, 46, 0.85) !important; /* semi transparente */
+  color: #fff !important;
+  padding-right: 40px !important; /* espacio para la X */
+  border-radius: 12px !important;
+}
+
+/* Icono lupa */
+.mapboxgl-ctrl-geocoder--icon-search {
+  fill: #aaa !important;
+}
+
+/* Botón X (clear) */
+.mapboxgl-ctrl-geocoder--button {
+  background: transparent !important;
+  right: 10px !important;
+}
+
+/* ===== DROPDOWN AL FRENTE ===== */
+.mapboxgl-ctrl-geocoder--suggestions {
+  z-index: 9999 !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+/* ===== INPUTS DEBAJO ===== */
+#paradaBox {
+  position: relative;
+  z-index: 1;
+}
+
+#destinoBox {
+  position: relative;
+  z-index: 2;
+}
+
+#origenBox {
+  position: relative;
+  z-index: 3;
+}  
+
 .price { color:#00e5ff; font-size:20px; }
 </style>
 </head>
