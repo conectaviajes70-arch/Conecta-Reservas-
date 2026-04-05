@@ -125,7 +125,9 @@ input, select {
 <button onclick="usarUbicacion()">📍 Usar mi ubicación</button>
 
 <div id="destinoBox"></div>
-<div id="paradaBox"></div>
+<button onclick="toggleParada()">+ Agregar parada</button>
+
+<div id="paradaBox" style="display:none;"></div>
 
 <select id="fechaTipo">
   <option value="ahora">Lo más pronto (1-2 hrs)</option>
@@ -371,6 +373,16 @@ function enviarReserva(km,min,precio){
    km:km,
    tiempo:min,
    precio:precio
+
+   function toggleParada(){
+ let p = document.getElementById("paradaBox");
+
+ if(p.style.display === "none"){
+   p.style.display = "block";
+ } else {
+   p.style.display = "none";
+ }
+}
  })});
 }
 </script>
