@@ -376,14 +376,19 @@ function guardarUsuario(){
 }
 
 function enviarReserva(km,min,precio){
- fetch("https://script.google.com/macros/s/AKfycbxjszK1c_tq1Ijpxdgyxz7LMWqlmFYKJUQK-3aC-wjqSInqMbEXqGtWyfr0AuzJP-MnCw/exec",{method:"POST",body:JSON.stringify({
+ fetch("https://script.google.com/macros/s/AKfycbxjszK1c_tq1Ijpxdgyxz7LMWqlmFYKJUQK-3aC-wjqSInqMbEXqGtWyfr0AuzJP-MnCw/exec", {
+ method:"POST",
+ body:JSON.stringify({
    tipo:"reserva",
    origen:document.querySelector('#origenBox input').value,
    destino:document.querySelector('#destinoBox input').value,
+   parada: document.querySelector('#paradaBox input')?.value || "",
    km:km,
    tiempo:min,
-   precio:precio
- })});
+   precio:precio,
+   telefono: document.getElementById('telefono').value
+ })
+});
 }
 </script>
 
