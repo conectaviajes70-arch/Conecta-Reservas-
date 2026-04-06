@@ -368,7 +368,7 @@ function reset(){ location.reload(); }
 
 /* BACKEND */
 function guardarUsuario(){
- fetch("TU_URL_APPS_SCRIPT",{method:"POST",body:JSON.stringify({
+ fetch("https://script.google.com/macros/s/AKfycbxjszK1c_tq1Ijpxdgyxz7LMWqlmFYKJUQK-3aC-wjqSInqMbEXqGtWyfr0AuzJP-MnCw/exec",{method:"POST",body:JSON.stringify({
    tipo:"registro",
    nombre:document.getElementById('nombre').value,
    telefono:document.getElementById('telefono').value
@@ -376,7 +376,7 @@ function guardarUsuario(){
 }
 
 function enviarReserva(km,min,precio){
- fetch("TU_URL_APPS_SCRIPT",{method:"POST",body:JSON.stringify({
+ fetch("https://script.google.com/macros/s/AKfycbxjszK1c_tq1Ijpxdgyxz7LMWqlmFYKJUQK-3aC-wjqSInqMbEXqGtWyfr0AuzJP-MnCw/exec",{method:"POST",body:JSON.stringify({
    tipo:"reserva",
    origen:document.querySelector('#origenBox input').value,
    destino:document.querySelector('#destinoBox input').value,
