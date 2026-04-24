@@ -216,12 +216,28 @@ function geo(id,cb){
     mapboxgl:mapboxgl,
     marker:false,
     countries:"mx",
-    placeholder: placeholderTexto // 👈 ESTA ES LA CLAVE
+    placeholder: placeholderTexto
   });
 
   document.getElementById(id).appendChild(g.onAdd(map));
   g.on('result',e=>cb(e.result.center));
 }
+
+/* 🔥 ACTIVAR GEOCODERS */
+geo("origenBox",c=>{
+  origenCoord = c;
+  setMarker("origen", c);
+});
+
+geo("destinoBox",c=>{
+  destinoCoord = c;
+  setMarker("destino", c);
+});
+
+geo("paradaBox",c=>{
+  paradaCoord = c;
+  setMarker("parada", c);
+});
 
 /* GPS */
 async function usarUbicacion(){
