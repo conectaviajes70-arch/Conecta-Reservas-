@@ -292,7 +292,7 @@ async function cotizar(){
  let km = parseFloat((r.distance/1000).toFixed(2));
 let min = Math.round(r.duration/60);
 
- let precio = Math.round(20 + (km * 7) + (min * 1.5));
+ let precio = Math.round(20 + (km * 8) + (min * 1.5));
 
  precio=Math.min(precio,28000);
  precio=Math.max(precio,48);
